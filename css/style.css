@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header img {
+    width: 40px;
+}
+
+main img {
+    width: 20px;
+}

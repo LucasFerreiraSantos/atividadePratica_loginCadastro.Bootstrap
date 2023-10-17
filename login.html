@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e cadastro com Bootstrap</title>
+  
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+
+</head>
+<body class="vh-100 vw-100">
+
+  <!-- MODAL -->
+  <div id="myModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+      <div class="modal-content">
+        <div class="modal-header bg-primary">
+          <h5 class="modal-title text-light">Sign Up</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="my-form">
+            <div class="mb-3">
+              <label for="in-name" class="form-label">What's your full name?</label>
+              <input type="in-name" class="form-control" id="in-name" aria-describedby="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <div class="row">
+                <div class="col-6">
+                    <label for="exampleInputPassword1" class="form-label" required>Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="col-6">
+                    <label for="exampleInputPassword2" class="form-label" required>Confirm password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success">Save changes</button>
+          </form>
+        </div>
+        <div class="modal-footer bg-primary">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <header class="container-fluid bg-primary p-3">
+    <div class="row" >
+      <div class="col-3 d-flex justify-content-center">
+        <img class="img-fluid" src="./img/login-square-arrow-button-outline_icon-icons.com_73220.svg" alt="image login">
+      </div>
+      <div class="col-9"></div>
+    </div>
+  </header>
+  <main class="container mt-5">
+    <div class="row px-2">
+      <div
+        class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 card p-4 rounded-5"
+      >
+        <div class="row">
+          <div class="col">
+            <h1 class="fw-bold">Sign in</h1>
+            <p class="fw-lighter">Sign in on the internal plataform</p>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center g-2">
+          <div class="col-12 d-flex justify-content-center col-sm-6">
+            <button
+              type="button"
+              class="btn btn-primary w-100 d-flex justify-content-center align-items-center"
+            >
+            <img class="m-1" src="./img/facebook_logo_icon_147291.svg" alt="image facebook">
+              LOGIN WITH FACEBOOK
+            </button>
+          </div>
+          <div class="col-12 d-flex justify-content-center col-sm-6">
+            <button
+              type="button"
+              class="btn btn-primary w-100 d-flex justify-content-center align-items-center"
+            >
+            <img class="m-1" src="./img/1492616990-1-google-search-logo-engine-service-suits_83412.svg" alt="image google">
+              LOGIN WITH GOOGLE
+            </button>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col d-flex justify-content-center">
+            <p class="fw-lighter">
+              or login with email address
+            </p>
+          </div>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button
+              type="button"
+              class="btn btn-primary w-100 text-uppercase"
+            >
+              Sign In Now
+            </button>
+            <div class="container d-flex justify-content-center align-items-center">
+              <div class="row">
+                <div class="col d-flex justify-content-center align-items-center">
+                  <span class="m-2 fw-lighter">Dont's have an account?</span>
+                  <a id="signUp" href="#">Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/api.js"></script>
+    <script src="./src/script.js"></script>
+    <script src="./src/signUp.js"></script>
+</body>
+</html>
